@@ -1,0 +1,53 @@
+
+
+.topstrip, .nav-custom .active
+{ 
+    background:#B03416;
+ }
+
+.navbar-brand 
+{ 
+    color: #B03416 !important;
+ }
+
+ .browntabs > div:nth-child(odd)
+ {
+    background:#B03416;
+ }
+
+ .photogallery
+ {
+     background: transparent;
+ }
+
+ .browntabs > div:nth-child(even)
+ {
+    background:#C6563B;
+ }
+
+ .browntabs > div .btn
+ {
+    background:#B03416;
+    color: #fff;
+ }
+
+ h2, .nav-custom .nav-link
+ {
+    color: #B03416 !important;
+ }
+
+
+ .resp-tab-content, .resp-tab-active
+ {
+    background:#B03416 !important; 
+ }
+
+ .bottom
+ {
+     background: #B03416 !important;
+ }
+
+ .brownbottom
+ {
+    background:#C6563B;
+ }
