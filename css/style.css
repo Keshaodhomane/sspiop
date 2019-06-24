@@ -154,15 +154,86 @@ body {
 }
 
 .headerimgs > div:first-child {
-  background: url(../images/header-img.jpg) no-repeat center top;
-  background-size: cover;
   height: 500px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 640px) {
   .headerimgs > div:first-child {
     height: 200px;
+    width: 100%;
   }
+}
+
+.headerimgs > div:first-child > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.headerimgs > div:first-child > div > h2 {
+  display: inline-block;
+  position: absolute;
+  bottom: 70px;
+  left: 50px;
+  color: #fff;
+  background: #543C28;
+  padding: 10px 20px;
+}
+
+@media (max-width: 640px) {
+  .headerimgs > div:first-child > div > h2 {
+    font-size: 20px;
+    font-weight: normal;
+    left: 20px;
+  }
+}
+
+.headerimgs > div:first-child > div > h3 {
+  display: inline-block;
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  color: #fff;
+  background: #425920;
+  padding: 10px 20px;
+}
+
+@media (max-width: 640px) {
+  .headerimgs > div:first-child > div > h3 {
+    font-size: 15px;
+    font-weight: normal;
+    left: 20px;
+    bottom: 30px;
+  }
+}
+
+.headerimgs > div:first-child .img1 {
+  background: url(../images/header-img.jpg) no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.headerimgs > div:first-child .img2 {
+  background: url(../images/header-img2.jpg) no-repeat center center;
+  background-size: cover;
+  z-index: 2;
+}
+
+.headerimgs > div:first-child .img3 {
+  background: url(../images/header-img3.jpg) no-repeat center center;
+  background-size: cover;
+  z-index: 3;
+}
+
+.headerimgs > div:first-child .img4 {
+  background: url(../images/header-img4.jpg) no-repeat center center;
+  background-size: cover;
+  z-index: 4;
 }
 
 .headerimgs > div:last-child {
@@ -326,7 +397,7 @@ h2 {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.65)));
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
   /* IE6-9 */
 }
 

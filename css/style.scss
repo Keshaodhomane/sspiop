@@ -17,9 +17,12 @@ $grey : #D9D6D2;
 
 /* fonts */
 
-$roboto-condensed : 'Roboto Condensed', sans-serif;
-$roboto : 'Roboto', sans-serif;
-$encode : 'Encode Sans Condensed', sans-serif;
+$roboto-condensed : 'Roboto Condensed',
+sans-serif;
+$roboto : 'Roboto',
+sans-serif;
+$encode : 'Encode Sans Condensed',
+sans-serif;
 
 
 
@@ -41,7 +44,8 @@ body {
     text-align: center;
     color: $white;
     font-weight: normal;
-    font-size: .95em;;
+    font-size: .95em;
+    ;
     line-height: 40px;
 
     a {
@@ -127,7 +131,7 @@ body {
         @media (max-width:640px) {
             border-bottom: 1px solid $green;
             padding-left: 10px;
-            margin:0;
+            margin: 0;
         }
 
         .nav-link {
@@ -170,60 +174,147 @@ body {
 }
 
 
-.headerimgs
-{
+.headerimgs {
     display: grid;
     grid-template-columns: 1fr 406px;
 
-    @media(max-width:640px)
-    {
+    @media(max-width:640px) {
         grid-template-columns: 1fr;
     }
 
 
-    & > div:first-child
-    {
-        background: url(../images/header-img.jpg) no-repeat center top;
-        background-size: cover;
+    &>div:first-child {
+
         height: 500px;
-        @media(max-width:640px)
-        {
-            height:200px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+
+        @media(max-width:640px) {
+            height: 200px;
+            width: 100%;
         }
+
+        &>div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+
+
+            & > h2
+            {
+                display: inline-block;
+                position: absolute;
+                bottom:70px;
+                left: 50px;
+                color: #fff;
+                background: #543C28;
+                padding: 10px 20px;
+
+                
+        @media (max-width:640px) {
+         font-size: 20px;
+         font-weight: normal;
+         left: 20px;
+        }
+
+               
+            }
+
+            & > h3
+            {
+                display: inline-block;
+                position: absolute;
+                bottom:20px;
+                left: 50px;
+                color: #fff;
+                background: #425920;
+                padding: 10px 20px;
+
+                
+        @media (max-width:640px) {
+            font-size: 15px;
+            font-weight: normal;
+            left: 20px;
+            bottom: 30px;
+        }
+
+               
+            }
+
+        }
+
+        .img1 {
+            background: url(../images/header-img.jpg) no-repeat center center;
+            background-size: cover;
+            z-index: 1;
+
+        }
+
+
+        .img2 {
+            background: url(../images/header-img2.jpg) no-repeat center center;
+            background-size: cover;
+            z-index: 2;
+
+        }
+
+
+        .img3 {
+            background: url(../images/header-img3.jpg) no-repeat center center;
+            background-size: cover;
+            z-index: 3;
+
+        }
+
+
+        .img4 {
+            background: url(../images/header-img4.jpg) no-repeat center center;
+            background-size: cover;
+            z-index: 4;
+
+        }
+
+
+
+
+
+
     }
 
-    & > div:last-child
-    {
-        background:url(../images/right-img.jpg) no-repeat center top;
+
+
+
+    &>div:last-child {
+        background: url(../images/right-img.jpg) no-repeat center top;
         background-size: cover;
-        height:500px;
+        height: 500px;
 
 
-        ul{
+        ul {
             margin: 20px 20px 0 20px;
             padding: 0;
             list-style: none;
 
-            li
-            {
+            li {
                 margin: 0;
                 padding: 0;
                 list-style: none;
 
-                a
-                {
-                    background:url(../images/icon-arrow.svg) no-repeat left center;
+                a {
+                    background: url(../images/icon-arrow.svg) no-repeat left center;
                     background-size: 12px;
                     display: block;
-                    padding:7px 0px 7px 20px;
-                    border-bottom: 1px solid rgba($green,.5);
+                    padding: 7px 0px 7px 20px;
+                    border-bottom: 1px solid rgba($green, .5);
                     color: $white;
                     font-family: $roboto;
-                    transition:.5s;
-                    
-                    &:hover
-                    {
-                        text-decoration:none;
+                    transition: .5s;
+
+                    &:hover {
+                        text-decoration: none;
                         background: $white;
                         color: $black;
                     }
@@ -237,78 +328,68 @@ body {
 }
 
 
-.browntabs
-{
+.browntabs {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
-    @media(max-width:640px)
-    {
+    @media(max-width:640px) {
         grid-template-columns: 1fr 1fr;
-        & > div
-        {
-            border:1px solid rgba($black,.5);
+
+        &>div {
+            border: 1px solid rgba($black, .5);
             background: $darkbrown !important;
         }
 
     }
 
-    @media(max-width:480px)
-    {
+    @media(max-width:480px) {
         grid-template-columns: 1fr;
 
     }
-    
-    & > div:nth-child(odd)
-    {
+
+    &>div:nth-child(odd) {
         background: $brown;
     }
 
-    & > div:nth-child(even)
-    {
+    &>div:nth-child(even) {
         background: $darkbrown;
     }
 
-    & > div
-    {
-        text-align:center;
+    &>div {
+        text-align: center;
         color: $white;
         padding: 15px 0;
 
-        h5
-        {
+        h5 {
             font-family: $encode;
-            
+
             font-size: 22px;
             text-shadow: 1px 1px 2px $black;
         }
 
-        h3
-        {
-          font-size: 18px;
-          font-family: $encode;
-          font-weight:bold;
-          text-shadow: 1px 1px 1px $black;  
+        h3 {
+            font-size: 18px;
+            font-family: $encode;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px $black;
         }
 
-        .btn
-        {
-            background:$lightgreen;
-            border:none;
+        .btn {
+            background: $lightgreen;
+            border: none;
             border-radius: 15px;
             color: $green;
             font-family: $roboto-condensed;
             font-weight: bold;
-            text-align:center;
+            text-align: center;
             font-size: 14px;
             min-width: 150px;
             height: 30px;
-            box-shadow: 1px 1px 1px 1px rgba($black,.5);
-            transition:.5s;
+            box-shadow: 1px 1px 1px 1px rgba($black, .5);
+            transition: .5s;
 
-            &:hover
-            {
-                background:$white;
+            &:hover {
+                background: $white;
                 color: $black;
                 transform: scale(1.08);
             }
@@ -320,220 +401,200 @@ body {
 
 
 
-.btn
-{
-    background:$lightgreen;
-    border:none;
+.btn {
+    background: $lightgreen;
+    border: none;
     border-radius: 15px;
     color: $green;
     font-family: $roboto-condensed;
     font-weight: bold;
-    text-align:center;
+    text-align: center;
     font-size: 14px;
     min-width: 150px;
     height: 30px;
-    box-shadow: 1px 1px 1px 1px rgba($black,.5);
-    transition:.5s;
+    box-shadow: 1px 1px 1px 1px rgba($black, .5);
+    transition: .5s;
 
-    &:hover
-    {
-        background:$white;
+    &:hover {
+        background: $white;
         color: $black;
         transform: scale(1.08);
     }
 }
 
 
-h2
-{
-    color:$brown;
-    font-size:30px;
-    font-family:$encode;
-    font-weight:normal;
+h2 {
+    color: $brown;
+    font-size: 30px;
+    font-family: $encode;
+    font-weight: normal;
 
-    @media (max-width:640px)
-    {
+    @media (max-width:640px) {
         font-size: 20px;
     }
 }
 
 
-.campusnews
-{
+.campusnews {
     background: $grey;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 
-   
 
-    .gradient
-    {
 
-background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+    .gradient {
+
+        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+        /* IE6-9 */
 
     }
 
-    .news
-    {
-        border:4px solid $white;
-        position:relative;
+    .news {
+        border: 4px solid $white;
+        position: relative;
 
-        img{ width:100%;}
+        img {
+            width: 100%;
+        }
 
-        .overlap
-        {
+        .overlap {
             @extend .gradient;
             width: 100%;
             height: 100%;
             display: grid;
             position: absolute;
             left: 0;
-            top:0;
-            z-index:2;
+            top: 0;
+            z-index: 2;
 
-            .contents
-            {
-                align-self:end;
+            .contents {
+                align-self: end;
                 justify-self: center;
-                color:$white;
+                color: $white;
 
-                h4
-                {
-                    font-size:17px;
-                    font-family:$roboto-condensed;
+                h4 {
+                    font-size: 17px;
+                    font-family: $roboto-condensed;
 
                 }
 
-                p
-                {
-                    font-size:14px;
-                    font-family:$roboto;
-                    text-align:left;
+                p {
+                    font-size: 14px;
+                    font-family: $roboto;
+                    text-align: left;
                 }
-                
+
             }
         }
 
-        
+
     }
 
 
 
-    .btn-sm
-    {
-        background:$brown;
-        color:$white;
-        border-radius:15px;
-        min-width:150px;
-        font-family:$roboto-condensed;
+    .btn-sm {
+        background: $brown;
+        color: $white;
+        border-radius: 15px;
+        min-width: 150px;
+        font-family: $roboto-condensed;
         box-shadow: 1px 1px 1px 1px $black;
     }
 }
 
 
-.tabsbg
-{
+.tabsbg {
     background: url(../images/tabs-bg.jpg) no-repeat center center;
     background-size: cover;
 
-    .parentHorizontalTab
-    {
+    .parentHorizontalTab {
         display: grid;
 
-        .resp-tabs-list
-        {
+        .resp-tabs-list {
             display: inline-block;
             align-self: center;
         }
     }
 
 
-    img
-    {
+    img {
         border-radius: 10px;
-        border:6px solid $white;
+        border: 6px solid $white;
 
-        @media (max-width:640px)
-        {
-            border:2px solid $white;
+        @media (max-width:640px) {
+            border: 2px solid $white;
         }
     }
 }
 
 
 
-.photogallery
-{
+.photogallery {
     background: url(../images/photo-gallery-bg.jpg) no-repeat center center;
     background-size: cover;
 
-    h2
-    {
+    h2 {
         color: #fff;
     }
 
 }
 
 
-.slider-nav > div
-{
- 
-      margin:10px 10px !important;
-  
+.slider-nav>div {
+
+    margin: 10px 10px !important;
+
 }
 
 
-.slick-prev
-{
+.slick-prev {
     background: none;
-    border:none;
+    border: none;
 
 }
 
 
-.bottom
-{
-    background:$green;
+.bottom {
+    background: $green;
     color: $white;
     font-family: $roboto-condensed;
-   
-    h4
-    {
+
+    h4 {
         font-size: 18px;
         font-weight: bold;
         font-family: $encode;
     }
 
 
-    ul{
+    ul {
         list-style: none;
         margin: 0;
         padding: 0;
-        li
-        {
+
+        li {
             list-style: none;
             margin: 0;
             padding: 0 0;
 
-            a
-            {
+            a {
                 color: $white;
                 line-height: 2em;
-                
-                &:hover
-                {
-                    text-decoration:none;
+
+                &:hover {
+                    text-decoration: none;
                 }
             }
         }
     }
 
 
-    .brownbottom
-    {
+    .brownbottom {
         background: $brown;
         line-height: 40px;
         color: $white;
@@ -544,67 +605,59 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 
 
-.internal-header-img
-{
-    background:url(../images/internal-header.jpg) no-repeat center top;
-    background-size:cover;
-    min-height:150px;
-    display:grid;
+.internal-header-img {
+    background: url(../images/internal-header.jpg) no-repeat center top;
+    background-size: cover;
+    min-height: 150px;
+    display: grid;
 
 
-    h2
-    {
-        color:$green;
-        font-family:$roboto-condensed;
-        padding:0;
-        margin:0;
-        align-self:center;
+    h2 {
+        color: $green;
+        font-family: $roboto-condensed;
+        padding: 0;
+        margin: 0;
+        align-self: center;
     }
 }
 
 
-.contentbox
-{
-    display:grid;
+.contentbox {
+    display: grid;
     grid-template-columns: 1fr 4fr;
 
-    @media(max-width:640px)
-    {
-        grid-template-columns:1fr !important;
+    @media(max-width:640px) {
+        grid-template-columns: 1fr !important;
     }
 
-    & > div:first-child
-    {
-        background:url(../images/right-img.jpg) no-repeat center top;
+    &>div:first-child {
+        background: url(../images/right-img.jpg) no-repeat center top;
         background-size: cover;
-        
 
 
-        ul{
+
+        ul {
             margin: 20px 20px 0 20px;
             padding: 0;
             list-style: none;
 
-            li
-            {
+            li {
                 margin: 0;
                 padding: 0;
                 list-style: none;
 
-                a
-                {
-                    background:url(../images/icon-arrow.svg) no-repeat left center;
+                a {
+                    background: url(../images/icon-arrow.svg) no-repeat left center;
                     background-size: 12px;
                     display: block;
-                    padding:7px 0px 7px 20px;
-                    border-bottom: 1px solid rgba($green,.5);
+                    padding: 7px 0px 7px 20px;
+                    border-bottom: 1px solid rgba($green, .5);
                     color: $white;
                     font-family: $roboto;
-                    transition:.5s;
-                    
-                    &:hover
-                    {
-                        text-decoration:none;
+                    transition: .5s;
+
+                    &:hover {
+                        text-decoration: none;
                         background: $white;
                         color: $black;
                     }
@@ -613,8 +666,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
         }
     }
 
-    & > div
-    {
-        padding:20px;
+    &>div {
+        padding: 20px;
     }
 }
