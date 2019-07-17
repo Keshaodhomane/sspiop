@@ -90,8 +90,7 @@ $(document).ready(function() {
               'css/orange.css'        
           );
       });
-      
-      
+          
       
       
       $('#green').click(function(event){
@@ -138,48 +137,28 @@ $(document).ready(function() {
 
 
 
-
-
-
-
+      
+      var img = $(".imgsbanner div");
+      var h2 = $(".imgsbanner div h2");
+      var h3 = $(".imgsbanner div h3");
       var t = new TimelineMax({paused:true});
 
-      t.set(".img1",{display:"none"})
-      t.set(".img2",{display:"none"})
-      t.set(".img3",{display:"none"})
-      t.set(".img4",{display:"none"})
-      t.set(".imgsbanner div h2",{display:"none"})
-      t.set(".imgsbanner div h3",{display:"none"})
+      t.set(img,{display:"none"})
+      t.set(h2,{display:"none"})
+      t.set(h3,{display:"none"})
 
-      t.from(".img1", 1, {display:"block", autoAlpha:0, scale:5, ease:Sine.easeOut})
-      t.from(".img1 h2", .5, {display:"block", autoAlpha:0, left:"-300px", ease:Sine.easeOut})
-      t.from(".img1 h3", .5, {display:"block", autoAlpha:0, left:"-300px", ease:Sine.easeOut})
-      t.to("img1",1,{autoAlpha:0},"+=2")
-
-
-      t.from(".img2", 1, {display:"block", autoAlpha:0, scale:5, ease:Sine.easeOut})
-      t.from(".img2 h2", .5, {display:"block", autoAlpha:0, left:"-300px", ease:Sine.easeOut})
-      t.from(".img2 h3", .5, {display:"block", autoAlpha:0, left:"-300px", ease:Sine.easeOut})
-      t.to("img2",1,{autoAlpha:0},"+=2")
-
-
-      t.from(".img3", 1, {display:"block", autoAlpha:0, scale:5, ease:Sine.easeOut})
-      t.from(".img3 h2", .5, {display:"block", autoAlpha:0, left:"-300px", ease:Sine.easeOut})
-      t.from(".img3 h3", .5, {display:"block", autoAlpha:0, left:"-300px", ease:Sine.easeOut})
-      t.to("img3",1,{autoAlpha:0},"+=2")
+      $(img).each(function(index, element)
+      {
+        t.from(img[index], 1, {display:"block", autoAlpha:0, scale:5, ease:Sine.easeOut})
+        t.from(h2[index], .5, {display:"block", autoAlpha:0, left:"-300px", ease:Sine.easeOut})
+        t.from(h3[index], .5, {display:"block", autoAlpha:0, left:"-300px", ease:Sine.easeOut})
+        t.to(img[index],1,{autoAlpha:0},"+=2");
+       
+      })
       
-
-      t.from(".img4", 1, {display:"block", autoAlpha:0, scale:5, ease:Sine.easeOut})
-      t.from(".img4 h2", .5, {display:"block", autoAlpha:0, left:"-300px", ease:Sine.easeOut})
-      t.from(".img4 h3", .5, {display:"block", autoAlpha:0, left:"-300px", ease:Sine.easeOut})
-      t.to("img4",1,{autoAlpha:0},"+=2")
-
-
       t.play();
       t.repeat(-1);
 
-
-
-
+      $("div.upload-progress-bar").each(function (index,value) {alert(this.id); });
    
 });
